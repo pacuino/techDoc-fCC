@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>C Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>C Documentation</header>
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#C_Syntax" class="nav-link">C Syntax</a></li>
+            <li><a href="#C_Statements" class="nav-link">C Statements</a></li>
+            <li><a href="#C_Output" class="nav-link">C Output</a></li>
+            <li><a href="#C_Comments" class="nav-link">C Comments</a></li>
+            <li><a href="#C_Variables" class="nav-link">C Variables</a></li>
+            <li><a href="#C_Data_Types" class="nav-link">C Data Types</a></li>
+            <li><a href="#C_Constants" class="nav-link">C Constants</a></li>
+            <li><a href="#C_Operators" class="nav-link">C Operators</a></li>
+            <li><a href="#C_If_Else" class="nav-link">C If Else</a></li>
+            <li><a href="#C_Switch" class="nav-link">C Switch</a></li>
+            <li><a href="#C_While_Loop" class="nav-link">C While Loop</a></li>
+            <li><a href="#C_For_Loop" class="nav-link">C For Loop</a></li>
+            <li><a href="#C_Arrays" class="nav-link">C Arrays</a></li>
+            <li><a href="#C_Users_Input" class="nav-link">C Users Input</a></li>
+            <li><a href="#C_Pointers" class="nav-link">C Pointers</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <article>
+                <h2>What is C?</h2>
+                <p>
+                    C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972.
+                    It is a very popular language, despite being old. The main reason for its popularity is because it is a fundamental language in the field of computer science.
+                    C is strongly associated with UNIX, as it was developed to write the UNIX operating system.
+                </p>
+                <h2>Why Learn C?</h2>
+                <ul>
+                    <li>It is one of the most popular programming languages in the world.</li>
+                    <li>If you know C, you will have no problem learning other popular programming languages such as Java, Python, C++, C#, etc, as the syntax is similar.</li>
+                    <li>C is very fast, compared to other programming languages, like Java and Python.</li>
+                    <li>C is very versatile; it can be used in both applications and technologies.</li>
+                </ul>
+                <h2>Difference between C and C++</h2>
+                <ul>
+                    <li>C++ was developed as an extension of C, and both languages have almost the same syntax</li>
+                    <li>The main difference between C and C++ is that C++ support classes and objects, while C does not</li>
+                </ul>
+            </article>
+        </section>
+        <section id="C_Syntax" class="main-section">
+            <header>C Syntax</header>
+            <article>
+                <h2 id="c-syntax1">Syntax</h2>
+                <p>To get started with writing C, open the Scratchpad and write your first "Hello world" C code:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black">#include &lt;stdio.h&gt;</span>
+
+                        <span class="blue">int</span> <span class="black">main() {</span>
+                          <span class="black">printf(<span class="darkred">"Hello World!"</span>);
+                          return <span class="red">0</span>;
+                        }</span>
+                    </code>
+                </div>
+                <h2>Example explained</h2>
+                <p><strong>Line 1:</strong><code class="code inline red">#include &lt;stdio.h&gt;</code>  is a header file library that lets us work with input and output functions, such as <code class="code inline red">printf()</code> (used in line 4). Header files add functionality to C programs.</p>
+                <p><strong>Line 2:</strong> A blank line. C ignores white space. But we use it to make the code more readable.</p>
+                <p><strong>Line 3:</strong> Another thing that always appear in a C program is <code class="code inline red">main().</code> This is called a function. Any code inside its curly brackets <code class="code inline red">{}</code> will be executed.</p>
+                <p><strong>Line 4:</strong> <code class="code inline red">printf()</code> is a <strong>function</strong> used to output/print text to the screen. In our example, it will output "Hello World!".</p>
+                <p><strong>Line 5:</strong> <code class="code inline red">return 0</code> ends the <code class="code inline red">main()</code> function.</p>
+                <p><strong>Line 6:</strong> Do not forget to add the closing curly bracket <code class="code inline red">}</code> to actually end the main function.</p>
+            </article>
+        </section>
+        <section id="C_Statements" class="main-section">
+            <header>C Statements</header>
+            <article>
+                <h2>C Statements</h2>
+                <p>A <strong>computer program</strong> is a list of "instructions" to be "executed" by a computer.
+                In a programming language, these programming instructions are called <strong>statements.</strong>
+                The following statement "instructs" the compiler to print the text "Hello World" to the screen:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class=" code black">printf(<span class="darkred">"Hello World!"</span>);</code>
+                </div>
+                    <p>It is important that you end the statement with a semicolon <code class="code inline red">;</code>
+                    If you forget the semicolon (<code class="code inline red">;</code>), an error will occur and the program will not run:</p>
+                <div class="example error">
+                    <h3>Example</h3>
+                    <code class="code black">printf(<span class="darkred">"Hello World!"</span>)</code>
+                    <code class="code red">error: expected ';' before 'return'</code>
+                </div>
+                <h2>Many Statements</h2>
+                <p>Most C programs contain many statements.</p>   
+                <p>The statements are executed, one by one, in the same order as they are written:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black">printf(<span class="darkred">"Hello World!"</span>);
+                        <span class="black">printf(<span class="darkred">"Have a good day!"</span>);</span>
+                        <span class="black">return <span class="red">0</span></span>
+                    </code>
+                </div>
+                <h2>Example explained</h2>
+                <p>From the example above, we have three statements:</p>
+                <ul>
+                    <li><code class="code inline black">printf("Hello World!");</code></li>
+                    <li><code class="code inline black">printf("Have a good day!");</code></li>
+                    <li><code class="code inline black">return 0;</code></li>
+                </ul>
+                <p>The first statement is executed first (print "Hello World!" to the screen).<br>
+                Then the second statement is executed (print "Have a good day!" to the screen).<br>
+                And at last, the third statement is executed (end the C program successfully).</p>
+            </article>
+        </section>
+        <section id="C_Output" class="main-section">
+            <header>C Output</header>
+            <article>
+                <h2>Output (Print Text)</h2>
+                To output values or print text in C, you can use the <code class="code-inline">printf()</code> function:
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black">#include &lt;stdio.h&gt;
+
+                        <span class="blue">int</span> main() {
+                          printf(<span class="darkred">"Hello World!"</span>);
+                          return <span class="red">0</span>;
+                        }
+                    </code>
+                </div>
+                    <h2>Double Quotes</h2>
+                When you are working with text, it must be wrapped inside double quotations marks <code class="code inline">""</code>.<br>
+                    <p>If you forget the double quotes, an error occurs:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <code class="code black">printf(<span class="darkred">"This sentence will work!"</span>);</code>
+                        <code class="code red">printf(This sentence will produce an error.);</code>
+                    </div>
+                    <h2>Many <code class="code inline">printf()</code> Functions</h2>
+                    <p>You can use as many <code class="code inline">printf()</code> functions as you want. However, note that it does not insert a new line at the end of the output:</p>
+                    <div class="example">
+                        <h3>Example</h3>
+                        <code class="code black">#include &ltstdio.h&gt
+
+                        <span class="blue">int</span> <span class="black">main() {</span> 
+                          printf(<span class="darkred">"Hello World!"</span>);
+                          printf(<span class="darkred">"I am learning C."</span>);
+                          printf(<span class="darkred">"And it is awesome!"</span>);
+                          return <span class="red">0</span>;
+                        }</code>
+                </div>
+            </article>
+        </section>
+        <section id="C_Comments" class="main-section">
+            <header>C Comments</header>
+            <article>
+                <h2>Comments in C</h2>
+                Comments can be used to explain code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
+                <p>Comments can be <strong>singled-lined</strong> or <strong>multi-lined.</strong></p>
+                <h2>Single-line Comments</h2>
+                <p>Single-line comments start with two forward slashes (<code class="code inline">//</code>).</p>
+                <p>Any text between (<code class="code inline">//</code>) and the end of the line is ignored by the compiler (will not be executed).</p>
+                <p>This example uses a single-line comment before a line of code:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// This is a comment
+                        printf("Hello World!");</code>
+                </div>
+                <p>This example uses a single-line comment at the end of a line of code:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black">printf(<span class="darkred">"Hello World!"</span>);</span>// This is a comment</code>
+                </div>
+                <h2>C Multi-line Comments</h2>
+                <p>Multi-line comments start with <code class="code inline">/*</code> and ends with <code class="code inline">*/</code>.</p>
+                <p>Any text between <code class="code inline">/*</code> and <code class="code inline">*/</code> will be ignored by the compiler:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">/* The code below will print the words Hello World!
+                        to the screen, and it is amazing */
+                        <span class="black">printf(<span class="darkred">"Hello World!"</span>);</span></code>
+                </div>
+            </article>
+        </section>
+        <section id="C_Variables" class="main-section">
+            <header>C Variables</header>
+            <article>
+                <p>Variables are containers for storing data values, like numbers and characters.</p>
+                <p>In C, there are different types of variables (defined with different keywords), for example:</p>
+                <ul>
+                    <li><code class="code inline red">int</code> - stores integers (whole numbers), without decimals, such as <code class="code inline red">123</code> or <code class="code inline red">-123</code>.</li>
+                    <li><code class="code inline red">float</code> - stores floating point numbers, with decimals, such as <code class="code inline red">19.99</code> or <code class="code inline red">-19.99</code>.</li>
+                    <li><code class="code inline red">char</code> - stores single characters, such as <code class="code-inline red">'a'</code> or <code class="code inline red">'B'</code>. Characters are surrounded by single quotes.</li>
+                </ul>
+                <h2>Declaring (Creating) Variables</h2>
+                <p>To create a variable, specify the type and assign it a value:</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                     <code class="code"><em>type variableName = value;</em></code>   
+                </div>
+                <p>Where type is one of C types (such as <code class="code inline red">int</code>), and variableName is the name of the variable (such as <strong>x</strong> or <strong>myName</strong>). The <strong>equal sign</strong> is used to assign a value to the variable.</p>
+                <p>So, to create a variable that should <strong>store a number</strong>, look at the following example:</p>
+                <div class="example">
+                    <h3>Example</h1>
+                    <p>Create a variable called myNum of type <code class="code inline red">int</code> and assign the value 15 to it:</p>
+                    <code class="code black"><span class="blue">int</span> myNum = <span class="red">15</span>;</code>    
+                </div>
+                <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// Declare a variable
+                        <span class="black">int myNum;</span>
+                        
+                        // Assign a value to the variable
+                        <span class="black">myNum = <span class="red">15</span>;</span></code>
+                </div>
+                <h2>Output Variables</h2>
+                <p>You learned from the <a href="#C_Output">output chapter</a> that you can output values/print text with the <code class="code inline red">printf()</code> function:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black">printf(<span class="darkred">"Hello World!"</span>);</span></code>
+                </div>
+                <p>In many other programming languages (like Python, Java, and C++), you would normally use a <strong>print function</strong> to display the value of a variable. However, this is not possible in C:</p>
+                <div class="example error">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">myNum = <span class="red">15</span>;</span>
+                        <span class="black">printf(myNum);</span>  // Nothing happens</code>
+                </div>
+                <h2>Format Specifiers</h2>
+                <p>Format specifiers are used together with the <code class="code inline red">printf()</code> function to tell the compiler what type of data the variable is storing. It is basically a <strong>placeholder</strong> for the variable value.</p>
+                <p>A format specifier starts with a percentage sign <code class="code inline red">%</code>code-inline, followed by a character.</p>
+                <p>For example, to output the value of an <code class="code inline">int</code> variable, use the format specifier <code class="code inline red">%d</code> surrounded by double quotes (<code class="code inline">""</code>), inside the <code class="code inline red">printf()</code> function:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">myNum = <span class="red">15</span>;</span>
+                        <span class="black">printf(<span class="darkred">"%d"</span>, myNum);</span>  // Outputs 15</code>
+                </div>
+                <p>To print other types, use <code class="code inline red">%c</code> for <code class="code inline red">char</code> and <code class="code inline red">%f</code> for <code class="code inline red">float</code>:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// Create variables
+                        <span class="blue">int</span> <span class="black">myNum = <span class="red">15</span>;</span>            // Integer (whole number)
+                        <span class="blue">float</span> <span class="black">myFloatNum = <span class="red">5.99</span>;</span>     // Floating point number
+                        <span class="blue">char</span> <span class="black">myLetter = <span class="red">'D'</span>;</span>         // Character
+                        
+                        // Print variables
+                        <span class="black">printf(<span class="darkred">"%d\n"</span>, myNum);</span>
+                        <span class="black">printf(<span class="darkred">"%f\n"</span>, myFloatNum);</span>
+                        <span class="black">printf(<span class="darkred">"%c\n"</span>, myLetter);</span></code>
+                </div>
+                <p>To combine both text and a variable, separate them with a comma inside the <code class="code inline red">printf()</code> function:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black"><span class="blue">int</span> myNum = <span class="red">15</span>;
+                        printf(<span class="darkred">"My favorite number is: %d"</span>, myNum);</code>
+                </div>
+                <p>To print different types in a single <code class="code inline red">printf()</code> function, you can use the following:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black"><span class="blue">int</span> myNum = <span class="red">15</span>;
+                        <span class="blue">char</span> myLetter = <span class="darkred">'D'</span>;
+                        printf(<span class="darkred">"My number is %d and my letter is %c"</span>, myNum, myLetter);</code>
+                </div>
+            </article>
+        </section>
+        <section id="C_Data_Types" class="main-section">
+            <header>C Data Types</header>
+            <article>
+                <h2>Data Types</h2>
+                <p>As explained in the <a href="#C_Variables">Variables chapter</a>, a variable in C must be a specified <strong>data type</strong>, and you must use a format specifier inside the printf() function to display it: </p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// Create variables
+                        <span class="blue">int</span> <span class="black">myNum = <span class="red">5</span>;</span>             // Integer (whole number)
+                        <span class="blue">float</span> <span class="black">myFloatNum = <span class="red">5.99</span>;</span>   // Floating point number
+                        <span class="blue">char</span> <span class="black">myLetter = <span class="darkred">'D'</span>;</span>       // Character
+                        
+                        // Print variables
+                        <span class="black">printf(<span class="darkred">"%d\n"</span>, myNum);</span>
+                        <span class="black">printf(<span class="darkred">"%f\n"</span>, myFloatNum);</span>
+                        <span class="black">printf(<span class="darkred">"%c\n"</span>, myLetter);</span></code>
+                </div>
+                <h2>Basic Data Types</h2>
+                <p>The data type specifies the size and type of information the variable will store.</p>
+                <p>In this tutorial, we will focus on the most basic ones:</p>
+                <div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th style="width: 15%;">DataType</th>
+                                <th style="width: 15%;">Size</th>
+                                <th style="width: 60%;">Description</th>
+                                <th style="width: 10%;">Example</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="code inline blue">int</code>
+                                </td>
+                                <td>2 or 4 bytes</td>
+                                <td>Stores whole numbers, without decimals</td>
+                                <td>
+                                    <code class="code inline red">1</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="code inline blue">float</code>
+                                </td>
+                                <td>4 bytes</td>
+                                <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7 decimal digits</td>
+                                <td>
+                                    <code class="code inline red">1.99</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="code inline blue">double</code>
+                                </td>
+                                <td>8 bytes</td>
+                                <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits</td>
+                                <td>
+                                    <code class="code inline red">1.99</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="code inline blue">char</code>
+                                </td>
+                                <td>1 byte</td>
+                                <td>Stores a single character/letter/number, or ASCII values</td>
+                                <td>
+                                    <code class="code inline darkred">'A'</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>Basic Format Specifiers</h2>
+                <p>There are different format specifiers for each data type. Here are some of them:</p>
+                <div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th style="width: 50%;">Format Specifier</th>
+                                <th style="width: 50%;">Data Type</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="code inline darkred">%d</code> or <code class="code inline darkred">%i</code>
+                                </td>
+                                <td>
+                                    <code class="code inline blue">int</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="code inline darkred">%f</code> or <code class="code inline darkred">%F</code>
+                                </td>
+                                <td>
+                                    <code class="code inline blue">float</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code class="code inline darkred">%lf</code></td>
+                                <td><code class="code inline blue">double</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="code inline darkred">%c</code></td>
+                                <td><code class="code inline blue">char</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="code inline darkred">%s</code></td>
+                                <td>Used for strings (text), which you will learn more about in a later chapter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+        <section id="C_Constants" class="main-section">
+            <header>C Constants</header>
+            <article>
+                <h2>Constants</h2>
+                <p>If you don't want others (or yourself) to change existing variable values, you can use the const keyword.</p>
+                <p>This will declare the variable as "constant", which means <strong>unchangeable</strong> and <strong>read-only:</strong></p>
+                <div class="example error">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue"><strong>const</strong> int</span> <span class="black">myNum = <span class="red">15</span>;</span>  // myNum will always be 15
+                    <span class="black">myNum = <span class="red">10</span>;</span>  // error: assignment of read-only variable 'myNum'</code>
+                </div>
+                <p>You should always declare the variable as constant when you have values that are unlikely to change:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue"><strong>const</strong> int</span> <span class="black">minutesPerHour = <span class="red">60</span>;</span>
+                        <span class="blue"><strong>const</strong> float</span> <span class="black">PI = <span class="red">3.14</span>;</span>
+                    </code>
+                </div>
+                <h2>Good Practice</h2>
+                <p>Another thing about constant variables, is that it is considered good practice to declare them with uppercase.</p>
+                <p>It is not required, but useful for code readability and common for C programmers:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue"><strong>const</strong> int</span> <span class="black">BIRTHYEAR = <span class="red">1980</span>;</span></code>
+                </div>
+            </article>
+        </section>
+        <section id="C_Operators" class="main-section">
+            <header>C Operators</header>
+            <article>
+                <h2>Operators</h2>
+                <p>Operators are used to perform operations on variables and values.</p>
+                <p>In the example below, we use the <code class="code inline red">+</code> <strong>operator</strong> to add together two values:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black"><span class="blue">int</span> myNum = <span class="red">100</span> + <span class="red">50</span>;</code>
+                </div>
+                <p>Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">sum1 = <span class="red">100</span> + <span class="red">50</span>;</span>        // 150 (100 + 50)
+                        <span class="blue">int</span> <span class="black">sum2 = sum1 + <span class="red">250</span>;</span>      // 400 (150 + 250)
+                        <span class="blue">int</span> <span class="black">sum3 = sum2 + sum2;</span>     // 800 (400 + 400)</code>
+                </div>
+                <p>C divides the operators into the following groups:</p>
+                <ul>
+                    <li>Arithmetic operators</li>
+                    <li>Assingment operators</li>
+                    <li>Comparison operators</li>
+                    <li>Logical operators</li>
+                    <li>Bitwise operators</li>
+                </ul>
+                <h2>Arithmetic Operators</h2>
+                <p>Arithmetic operators are used to perform common mathematical operations.</p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Example</tr>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>Adds together two values</td>
+                            <td>x + y</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Sutraction</td>
+                            <td>Substract one value from another</td>
+                            <td>x - y</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                            <td>Multiplies two values</td>
+                            <td>x * y</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>Divides one value by another</td>
+                            <td>x / y</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modulus</td>
+                            <td>Returns the division reminder</td>
+                            <td>x % y</td>
+                        </tr>
+                        <tr>
+                            <td>++</td>
+                            <td>Increment</td>
+                            <td>Increases the value of a variable by 1</td>
+                            <td>++x</td>
+                        </tr>
+                        <tr>
+                            <td>--</td>
+                            <td>Decrement</td>
+                            <td>Decreases the value of a variable by 1</td>
+                            <td>--x</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Assignment Operators</h2>
+                <p>Assignment operators are used to assign values to variables.</p>
+                <p>In the example below, we use the <strong>assignment</strong> operator (<code class="code inline red">=</code>) to assign the value <strong>10</strong> to a variable called <strong>x</strong>:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span><span class="black">x = <span class="red">10</span>;</span></code>
+                </div>
+                <p>The addition <strong>assignment operator</strong> (<code class="code inline red">+=</code>) adds a value to a variable:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span><span class="black">x = <span class="red">10</span>;</span>
+                    <span class="black">x += <span class="red">5</span>;</span></code>
+                </div>
+                <p>A list of all assignment operators:</p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th style="width: 33.3%;">Operator</th>
+                            <th style="width: 33.3%;">Example</th>
+                            <th style="width: 33.3%;">Same As</th>
+                        </tr>
+                        <tr>
+                            <td>=</td>
+                            <td>x = 5</td>
+                            <td>x = 5</td>
+                        </tr>
+                        <tr>
+                            <td>+=</td>
+                            <td>x += 3</td>
+                            <td>x = x + 3</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>x -= 3</td>
+                            <td>x = x - 3</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>x *= 3</td>
+                            <td>x = x * 3</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>x /= 3</td>
+                            <td>x = x/3</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>x %= 3</td>
+                            <td>x = x % 3</td>
+                        </tr>
+                        <tr>
+                            <td>&=</td>
+                            <td>x &= 3</td>
+                            <td>x = x & 3</td>
+                        </tr>
+                        <tr>
+                            <td>|=</td>
+                            <td>x |= 3</td>
+                            <td>x = x|3</td>
+                        </tr>
+                        <tr>
+                            <td>^=</td>
+                            <td>x ^= 3</td>
+                            <td>x = x ^ 3</td>
+                        </tr>
+                        <tr>
+                            <td>>>=</td>
+                            <td>x >>= 3</td>
+                            <td>x = x >> 3</td>
+                        </tr>
+                        <tr>
+                            <td><<=</td>
+                            <td>x <<= 3</td>
+                            <td>x = x << 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Comparison Operators</h2>
+                <p>Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions.</p>
+                <p>The return value of a comparison is either <code class="code inline red">1</code> or <code class="code-inline">0</code>, which means <strong>true</strong> (<code class="code inline red">1</code>) or <strong>false</strong> (<code class="code inline red">0</code>). These values are known as <strong>Boolean values</strong>, and you will learn more about them in the Booleans and If..Else chapter.</p>
+                <p>In the following example, we use the <strong>greater than</strong> operator (<code class="code inline red">></code>) to find out if 5 is greater than 3:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">x = <span class="red">5</span>;</span>
+                        <span class="blue">int</span> <span class="black">y = <span class="red">3</span>;</span>
+                        <span class="black">printf(<span class="darkred">"%d"</span>, x > y);</span> // returns 1 (true) because 5 is greater than 3</code>
+                </div>
+                <p>A list of all comparison operators:</p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>==</td>
+                            <td>Equal to</td>
+                            <td>x == y</td>
+                            <td>Returns 1 if the values are equal</td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>Not equal</td>
+                            <td>x != y</td>
+                            <td>Returns 1 if the values are not equal</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>Greater than</td>
+                            <td>x > y</td>
+                            <td>Returns 1 if the first value is greater than the second value</td>
+                        </tr>
+                        <tr>
+                            <td><</td>
+                            <td>Less than</td>
+                            <td>x < y</td>
+                            <td>Returns 1 if the first value is greater than the second value</td>
+                        </tr>
+                        <tr>
+                            <td>>=</td>
+                            <td>Greater than or equal to</td>
+                            <td>x >= y</td>
+                            <td>Returns 1 if the first value is greater than, or equal to, the second value</td>
+                        </tr>
+                        <tr>
+                            <td><=</td>
+                            <td>Less than or equal to	</td>
+                            <td>x <= y</td>
+                            <td>Returns 1 if the first value is less than, or equal to, the second value</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Logical Operators</h2>
+                <p>You can also test for true or false values with logical operators.</p>
+                <p>Logical operators are used to determine the logic between variables or values:</p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>&&</td>
+                            <td>Logical and</td>
+                            <td>x < 5 && x < 10 </td>
+                            <td>Returns 1 if both statements are true</td>
+                        </tr>
+                        <tr>
+                            <td>||</td>
+                            <td>Logical or</td>
+                            <td>x < 5 || x < 4</td>
+                            <td>Returns 1 if one of the statements is true</td>
+                        </tr>
+                        <tr>
+                            <td>!</td>
+                            <td>Logical not</td>
+                            <td>!(x < 5 && x < 10)</td>
+                            <td>Reverse the result, returns 0 if the result is 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section id="C_If_Else" class="main-section">
+            <header>C If Else</header>
+            <article>
+                <h2>Conditions and If Statements</h2>
+                <p>You have already learned that C supports the usual logical conditions from mathematics:</p>
+                <ul>
+                    <li>Less than:<code class="code inline blue"> a &lt b </code> </li>
+                    <li>Less than or equal to: <code class="code inline blue"> a &lt= b </code></li>
+                    <li>Greater than: <code class="code inline blue"> a &gt b </code></li>
+                    <li>Greater than or equal to: <code class="code inline blue"> a &gt= b </code></li>
+                    <li>Equal to:<code class="code inline blue"> a == b </code></li>
+                    <li>Not Equal to:<code class="code inline blue"> a != b </code></li>
+                </ul>
+                <p>You can use these conditions to perform different actions for different decisions.</p>
+                <p>C has the following conditional statements:</p>
+                <ul>
+                    <li>Use <code class="code inline red">if</code> to specify a block of code to be executed, if a specified condition is <code class="code inline red">true</code></li>
+                    <li>Use <code class="code inline red">else</code> to specify a block of code to be executed, if the same condition is <code class="code inline red">false</code></li>
+                    <li>Use <code class="code inline red">else if</code> to specify a new condition to test, if the first condition is <code class="code inline red">false</code></li>
+                    <li>Use <code class="code inline red">switch</code> to specify many alternative blocks of code to be executed</li>
+                </ul>
+                <h2>The if Statement</h2>
+                <p>Use the <code class="code inline red">if</code> statement to specify a block of code to be executed if a condition is <code class="code inline red">true</code>.</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code"><span class="black">if (condition) {</span>
+                        // block of code to be executed if the condition is true
+                      <span class="black">}</span></code>
+                </div>
+                <p>In the example below, we test two values to find out if 20 is greater than 18. If the condition is <code class="code inline red">true</code>, print some text:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black">if (20 > 18) {
+                        printf(<span class="darkred">"20 is greater than 18"</span>)
+                      }</code>
+                </div>
+                <h2>Example explained</h3>
+                <p>In the example above we use two variables, x and y, to test whether x is greater than y (using the > operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".
+                </p>
+                <h2>The else Statement</h2>
+                <p>Use the <code class="code inline red">else</code> statement to specify a block of code to be executed if the condition is <code class="code inline red">false</code>.</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code"><span class="black">if (condition) {</span>
+                        // block of code to be executed if the condition is true
+                      <span class="black">} else {</span>
+                        // block of code to be executed if the condition is false
+                      <span class="black">}</span></code>
+                </div>
+                <br>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black">int time = <span class="red">20</span>;
+                        if (time < <span class="red">18</span>) {
+                          printf(<span class="darkred">Good day."</span>");
+                        } else {
+                          printf(<span class="darkred">"Good evening."</span>)
+                        }</span>
+                        // Outputs "Good evening."</code>
+                </div>
+                <h2>Example explained</h2>
+                <p>In the example above, time (20) is greater than 18, so the condition is <code class="code inline red">false</code>. Because of this, we move on to the <code class="code inline red">else</code> condition and print to the screen "Good evening". If the time was less than 18, the program would print "Good day".</p>
+                <h2>The else if Statement</h2>
+                <p>Use the <code class="code inline red">else if</code> statement to specify a new condition if the first condition is false.</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code"><span class="black"><span class="blue">if</span> (condition1) {</span>
+                        // block of code to be executed if condition1 is true
+                        <span class="black">} <span class="blue">else if</span> (condition2) {</span>
+                        // block of code to be executed if the condition1 is false and condition2 is true
+                        <span class="black">} <span class="blue">else</span> {</span>
+                        // block of code to be executed if the condition1 is false and condition2 is false
+                        <span class="black">}</span></code>
+                </div>
+               <br>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black"><span class="blue">int</span> time = 22;
+                        <span class="blue">if</span> (time < <span class="red">10</span>) {
+                          printf(<span class="darkred">"Good morning."</span>);
+                        } <span class="blue">else if</span> (time < <span class="red">20</span>) {
+                          printf(<span class="darkred">"Good day."</span>);
+                        } <span class="blue">else</span> {
+                          printf(<span class="darkred">"Good evening."</span>);
+                        }</span>
+                        // Outputs "Good evening."
+                    </code>
+                </div>
+                <h2>Example explained</h2>
+                <p>In the example above, time (22) is greater than 10, so the <strong>first condition</strong> is <code class="code inline red">false</code>. The next condition, in the <code class="code inline red">else if</code> statement, is also <code class="code inline red">false</code>, so we move on to the <code class="code inline red">else</code> condition since <strong>condition1</strong> and <strong>condition2</strong> is both <code class="code inline red">false</code> - and print to the screen "Good evening".</p>
+                <p>However, if the time was 14, our program would print "Good day."</p>
+            </article>
+        </section>
+        <section id="C_Switch" class="main-section">
+            <header>C Switch</header>
+            <article>
+                <h2>Switch Statement</h2>
+                <p>Instead of writing <strong>many</strong> <code class="code inline red">if..else</code> statements, you can use the <code class="code inline red">switch</code> statement.</p>
+                <p>The <code class="code inline red">switch</code> statement selects one of many code blocks to be executed:</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code"><span class="blue">switch</span> <span class="black">(expression) {</span>
+                        <span class="blue">case</span> <span class="black">x:</span>
+                          // code block
+                          <span class="blue">break;</span>
+                        <span class="blue">case</span> <span class="black">y:</span>
+                          // code block
+                          <span class="blue">break;</span>
+                          <span class="blue">default:</span>
+                          // code block
+                      <span class="black">}</span></code>
+                </div>
+                <p>This is how it works:</p>
+                <ul>
+                    <li>The <code class="code inline red">switch</code> expression is evaluated once</li>
+                    <li>The value of the expression is compared with the values of each <code class="code inline red">case</code></li>
+                    <li>If there is a match, the associated block of code is executed</li>
+                    <li>The <code class="code inline red">break</code> statement breaks out of the switch block and stops the execution</li>
+                    <li>The <code class="code inline red">default</code> statement is optional, and specifies some code to run if there is no case match</li>
+                </ul>
+                <p>The example below uses the weekday number to calculate the weekday name:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black"><span class="blue">int</span> day = 4;
+
+                        <span class="blue">switch</span> (day) {
+                                <span class="blue">case</span> <span class="red">1</span>:
+                                    printf(<span class="darkred">"Monday"</span>);
+                                <span class="blue">break</span>;
+                                <span class="blue">case</span> <span class="red">2</span>:
+                                    printf(<span class="darkred">"Tuesday"</span>);
+                                <span class="blue">break</span>;
+                                <span class="blue">case</span> <span class="red">3</span>:
+                                    printf(<span class="darkred">"Wednesday"</span>);
+                                <span class="blue">break</span>;
+                                <span class="blue">case</span> <span class="red">4</span>:
+                                    printf(<span class="darkred">"Thursday"</span>);
+                                <span class="blue">break</span>;
+                                <span class="blue">case</span> <span class="red">5</span>:
+                                    printf(<span class="darkred">"Friday"</span>);
+                                <span class="blue">break</span>;
+                                <span class="blue">case</span> <span class="red">6</span>:
+                                    printf(<span class="darkred">"Saturday"</span>);
+                                <span class="blue">break</span>;
+                                <span class="blue">case</span> <span class="red">7</span>:
+                                    printf(<span class="darkred">"Sunday"</span>);
+                                <span class="blue">break</span>;
+                                }</span>
+                        
+                        // Outputs "Thursday" (day 4)</code>
+                </div>
+                <h2>The break Keyword</h2>
+                <p>When C reaches a <code class="code inline red">break</code> keyword, it breaks out of the switch block.</p>
+                <p>This will stop the execution of more code and case testing inside the block.</p>
+                <p>When a match is found, and the job is done, it's time for a break. There is no need for more testing.</p>
+                <h2>The default Keyword</h2>
+                <p>The <code class="code inline red">default</code> keyword specifies some code to run if there is no case match:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black"><span class="blue">int</span> day = <span class="red">4</span>;
+
+                        <span class="blue">switch</span> (day) {
+                          <span class="blue">case</span> <span class="red">6</span>:
+                            printf(<span class="darkred">"Today is Saturday"</span>);
+                            <span class="blue">break</span>;
+                          <span class="blue">case</span> <span class="red">7</span>:
+                            printf(<span class="darkred">"Today is Sunday"</span>)
+                            <span class="blue">break</span>;
+                          <span class="blue">default:</span>
+                            printf(<span class="darkred">"Looking forward to the Weekend"</span>);
+                        }</span>
+                        
+                        // Outputs "Looking forward to the Weekend"</code>
+                </div>
+            </article>
+        </section>
+        <section id="C_While_Loop" class="main-section">
+            <header>C While Loop</header>
+            <article>
+                <h2>Loops</h2>
+                <p>Loops can execute a block of code as long as a specified condition is reached.</p>
+                <p>Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+                <h2>While Loop</h2>
+                <p>The <code class="code inline red">while</code> loop loops through a block of code as long as a specified condition is true:</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code"><span class="blue">while</span> <span class="black">(condition) {</span>
+                        // code block to be executed
+                      <span class="black">}</span></code>
+                </div>
+                <p>In the example below, the code in the loop will run, over and over again, as long as a variable (<code class="code inline red">i</code>) is less than 5:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">i = <span class="red">0</span>;</span> 
+
+                        <span class="blue">while</span> <span class="black">(i < <span class="red">5</span>) {</span> 
+                          <span class="black">printf(<span class="darkred">"%d\n"</span>, i);
+                            i++;
+                          }</span></code>
+                </div>
+                <h2>The Do/While Loop</h2>
+                <p>The <code class="code inline red">do/while</code> loop is a variant of the <code class="code inline red">while</code> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code"><span class="black"><span class="blue">do</span> {</span>
+                        // code block to be executed
+                      <span class="black">}</span>
+                      <span class="blue">while</span> <span class="black">(condition);</span></code>
+                </div>
+                <p>The example below uses a <code class="code inline red">do/while</code> loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">i = <span class="red">0</span>;</span>
+
+                        <span class="blue">do</span> <span class="black">{
+                            printf(<span class="darkred">"%d\n"</span> i);
+                            i++;
+                          }
+                          while (i < <span class="red">5</span>);</span> 
+                    </code>
+                </div>
+            </article>
+        </section>
+        <section id="C_For_Loop" class="main-section">
+            <header>C For Loop</header>
+            <article>
+                <h2>For Loop</h2>
+                <p>When you know exactly how many times you want to loop through a block of code, use the <code class="code inline blue">for</code> loop instead of a <code class="code inline blue">while</code> loop:</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code"><span class="blue">for</span> <span class="black">(expression 1; expression 2; expression 3) {</span>
+                        // code block to be executed
+                      <span class="black">}</span></code>
+                </div>
+                <p>Expression 1 is executed (one time) before the execution of the code block.</p>
+                <p>Expression 2 defines the condition for executing the code block.</p>
+                <p>Expression 3 is executed (every time) after the code block has been executed.</p>
+                <p>The example below will print the numbers 0 to 4:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black"><span class="blue">int</span> i;
+
+                        <span class="blue">for</span> (i = <span class="red">0</span>; i < <span class="red">5</span>; i++) {
+                          printf(<span class="darkred">"%d\n"</span> i);
+                        }</code>
+                </div>
+                <h2>Example explained</h2>
+                <p>Expression 1 sets a variable before the loop starts (int i = 0).</p>
+                <p>Expression 2 defines the condition for the loop to run (i must be less than 5). If the condition is true, the loop will start over again, if it is false, the loop will end.</p>
+                <p>Expression 3 increases a value (i++) each time the code block in the loop has been executed.</p>
+                <h2>Nested Loops</h2>
+                <p>It is also possible to place a loop inside another loop. This is called a <strong>nested loop</strong>.</p>
+                <p>The "inner loop" will be executed one time for each iteration of the "outer loop":</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black"><span class="blue">int</span> i, j;</span>
+
+                        // Outer loop
+                        <span class="black"><span class="blue">for</span> (i = <span class="red">1</span>; i <= <span class="red">2</span>; ++i) {
+                            printf(<span class="darkred">"Outer: %d\n"</span> i);</span>  // Executes 2 times
+                        
+                          // Inner loop
+                          <span class="black"><span class="blue">for</span> (j = <span class="red">1</span>; j <= <span class="red">3</span>; ++j) {
+                            printf(<span class="darkred">" Inner: %d\n"</span> j);</span>  // Executes 6 times (2 * 3)
+                          <span class="black">} 
+                        }</span></code>
+                </div>
+            </article>
+        </section>
+        <section id="C_Arrays" class="main-section">
+            <header>C Arrays</header>
+            <article>
+                <h2>Arrays</h2>
+                <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+                <p>To create an array, define the data type (like <code class="code inline blue">int</code>) and specify the name of the array followed by <strong>square brackets []</strong>.</p>
+                <p>To insert values to it, use a comma-separated list, inside curly braces:</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code black"><span class="blue">int</span> myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};</code>
+                </div>
+                <p>We have now created a variable that holds an array of four integers.</p>
+                <h2>Access the Elements of an Array</h2>
+                <p>To access an array element, refer to its <strong>index number</strong>.</p>
+                <p>Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+                <p>This statement accesses the value of the <strong>first element</strong> [0] in myNumbers:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black"><span class="blue">int</span> myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};
+                        printf(<span class="darkred">"%d"</span>, myNumbers[<span class="red">0</span>]);</span>
+                        
+                        // Outputs 25</code>
+                </div>
+                <h2>Change an Array Element</h2>
+                <p>To change the value of a specific element, refer to the index number:</p>
+                <div class="example">
+                    <h3>Syntax</h3>
+                    <code class="code black">myNumbers[<span class="red">0</span>] = <span class="red">33</span>;</code>
+                </div>
+                <br>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};
+                        myNumbers[<span class="red">0</span>] = <span class="red">33</span>;
+                        
+                        printf(<span class="darkred">"%d"</span>, myNumbers[<span class="red">0</span>]);</span>
+                        
+                        // Now outputs 33 instead of 25</code>
+                </div>
+                <h2>Loop Through an Array</h2>
+                <p>You can loop through the array elements with the <code class="code inline blue">for</code> loop.</p>
+                <p>The following example outputs all elements in the <code class="code inline blue">myNumbers</code> array:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};
+                        int i;
+                        
+                        <span class="blue">for</span> (i = <span class="red">0</span>; i < <span class="red">4</span>; i++) {
+                          printf(<span class="darkred">"%d\n"</span>, myNumbers[i]);
+                        }</span></code>
+                </div>
+                <h2>Set Array Size</h2>
+                <p>Another common way to create arrays, is to specify the size of the array, and add elements later:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// Declare an array of four integers:
+                        <span class="blue">int</span> myNumbers[4];
+                        
+                        // Add elements
+                        <span class="black">myNumbers[<span class="red">0</span>] = <span class="red">25</span>;
+                        myNumbers[<span class="red">1</span>] = <span class="red">50</span>;
+                        myNumbers[<span class="red">2</span>] = <span class="red">75</span>;
+                        myNumbers[<span class="red">3</span>] = <span class="red">100</span>;</span></code>
+                </div>
+                <p>Using this method, <strong>you should know the number of array elements in advance</strong>, in order for the program to store enough memory.</p>
+                <p>You are not able to change the size of the array after creation.</p>
+                <h2>Get Array Size or Length</h2>
+                <p>To get the size of an array, you can use the <code class="code inline blue">sizeof</code> operator:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};
+                        printf(<span class="darkred">"%lu"</span> <span class="blue">sizeof</span>(myNumbers));</span> // Prints 20</code>
+                </div>
+                <p class="note">Why did the result show 20 instead of 5, when the array contains 5 elements?</p>
+                <p>- It is because the sizeof operator returns the <code class="code inline blue">sizeof</code> a type in <strong>bytes</strong>.</p>
+                <p>You learned from the <a href="#C_Data_Types">Data Types chapter</a> that an <code class="code inline blue">int</code> type is usually 4 bytes, so from the example above, 4 x 5 (4 bytes x 5 elements) = <strong>20 bytes</strong>.</p>
+                <p>Knowing the memory size of an array is great when you are working with larger programs that require good memory management.</p>
+                <p>But when you just want to find out how many elements an array has, you can use the following formula (which divides the size of the array by the size of one array element):</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">int</span> <span class="black">myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};
+                        int length = <span class="blue">sizeof</span>(myNumbers) / <span class="blue">sizeof</span>(myNumbers[0]);
+                        
+                        printf(<span class="darkred">"%d"</span>, length);</span>  // Prints 5</code>
+                </div>
+                <h2>Making Better Loops</h2>
+                <p>In the array loops section in the previous chapter, we wrote the size of the array in the loop condition (<code class="code inline red">i < 4</code>). This is not ideal, since it will only work for arrays of a specified size.</p>
+                <p>However, by using the <code class="code inline red">sizeof</code> formula from the example above, we can now make loops that work for arrays of any size, which is more sustainable.</p>
+                <p>Instead of writing:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black"><span class="blue">int</span> myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};
+                        <span class="blue">int</span> i;
+                        
+                        <span class="blue">for</span> (i = <span class="red">0</span>; i < <span class="red">4</span>; i++) {
+                          printf(<span class="darkred">"%d\n"</span>, myNumbers[i]);
+                        }</code>
+                </div>
+                <p>It is better to write:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code black"><span class="blue">int</span> myNumbers[] = {<span class="red">25</span>, <span class="red">50</span>, <span class="red">75</span>, <span class="red">100</span>};
+                        <span class="blue">int</span> length = sizeof(myNumbers) / sizeof(myNumbers[0]);
+                        <span class="blue">int</span> i;
+                        
+                        <span class="blue">for</span> (i = <span class="red">0</span>; i < length; i++) {
+                          printf(<span class="darkred">"%d\n"</span>, myNumbers[i]);
+                        }</code>
+                </div>
+            </article>
+        </section>
+        <section id="C_Users_Input" class="main-section">
+            <header>C Users Input</header>
+            <article>
+                <h2>User Input</h2>
+                <p>You have already learned that <code class="code inline red">printf()</code> is used to <strong>output values</strong> in C.</p>
+                <p>To get <strong>user input</strong>, you can use the <code class="code inline red">scanf()</code> function:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// Create an integer variable that will store the number we get from the user
+                        <span class="blue">int</span> <span class="black">myNum;</span>
+                        
+                            // Ask the user to type a number
+                            <spam class="black">printf(<span class="darkred">"Type a number: \n"</span>);</spam>
+                            
+                            // Get and save the number the user types
+                            <span class="black">scanf(<span class="darkred">"%d"</span> , &myNum);</span>
+                            
+                            // Output the number the user typed
+                            <span class="black">printf(<span class="darkred">"Your number is: %d"</span>, myNum);</code></span>
+                </div>
+                <p class="note">The <code class="code inline blue">scanf()</code> function takes two arguments: the format specifier of the variable (%d in the example above) and the reference operator <cod class="code inline blue">(&myNum)</cod>, which stores the memory address of the variable.</p>
+                <h2>Multiple Inputs</h2>
+                <p>The <code class="code inline blue">scanf()</code> function also allow multiple inputs (an integer and a character in the following example):</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// Create an int and a char variable
+                        <span class="blue">int</span> <span class="black">myNum;</span>
+                        <span class="blue">char</span> <span class="black">myChar;</span>
+                        
+                        // Ask the user to type a number AND a character
+                        <span class="black"><span class="blue">printf</span>(<span class="darkred">"Type a number AND a character and press enter: \n"</span>)</span>
+                        
+                        // Get and save the number AND character the user types
+                        <span class="black"><span class="blue">scanf</span>(<span class="darkred">"%d %c"</span>, &myNum, &myChar);</span>
+                        
+                        // Print the number
+                        <span class="black"><span class="blue">printf</span>(<span class="darkred">"Your number is: %d\n"</span>, myNum);</span>
+                        
+                        // Print the character
+                       <span class="black"> <span class="blue">printf</span>(<span class="darkred">"Your character is: %c\n"</span>, myChar);</span></code>
+                </div>
+                <h2>Take String Input</h2>
+                <p>You can also get a string entered by the user:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code">// Create a string
+                        <span class="black"><span class="blue">char</span> firstName[<span class="red">30</span>];</span>
+                        
+                        // Ask the user to input some text
+                       <span class="black"> <span class="blue">printf</span>(<span class="darkred">"Enter your first name: \n"</span>);</span>
+                        
+                        // Get and save the text
+                        <span class="black"><span class="blue">scanf</span>(<span class="darkred">"%s"</span>, firstName);</span>
+                        
+                        // Output the text
+                        <span class="black"><span class="blue">printf</span>(<span class="darkred">"Hello %s"</span>, firstName);</span></code>
+                </div>
+                <p class="note">Note: When working with strings in <code class="code inline red">scanf()</code>, you must specify the size of the string/array (we used a very high number, 30 in our example, but atleast then we are certain it will store enough characters for the first name), and you don't have to use the reference operator (<code class="code inline red">&</code>).</p>
+                <p>However, the <code class="code inline red">scanf()</code> function has some limitations: it considers space (whitespace, tabs, etc) as a terminating character, which means that it can only display a single word (even if you type many words). For example:</p>
+                <div class="example error">
+                    <h3>Example</h3>
+                    <code class="code">char fullName[30];
+
+                        printf("Type your full name: \n");
+                        scanf("%s", &fullName);
+                        
+                        printf("Hello %s", fullName);
+                        
+                        // Type your full name: John Doe
+                        // Hello John</code>
+                </div>
+                <p>From the example above, you would expect the program to print "John Doe", but it only prints "John".</p>
+                <p>That's why, when working with strings, we often use the <code class="code inline red">fgets()</code> function to <strong>read a line of text</strong>. Note that you must include the following arguments: the name of the string variable, <code class="code inline red">sizeof</code>(<em>string_name</em>), and stdin:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="blue">char</span> <span class="black">fullName[30];
+
+                        <span class="blue">printf</span>(<span class="darkred">"Type your full name: \n"</span>);
+                        <span class="blue">fgets</span>(fullName, sizeof(fullName), stdin);
+                        
+                        <span class="blue">printf</span>(<span class="darkred">"Hello %s"</span>, fullName);</span>
+                        
+                        // Type your full name: John Doe
+                        // Hello John Doe</code>
+                </div>
+                <p class="note">Use the <code class="code inline blue">scanf()</code> function to get a single word as input, and use <code class="code inline blue">fgets()</code> for multiple words.</p>
+            </article>
+        </section>
+        <section id="C_Pointers" class="main-section">
+            <header>C Pointers</header>
+            <article>
+                <h2>Creating Pointers</h2>
+                <p>You learned from the previous chapter, that we can get the <strong>memory address</strong> of a variable with the reference operator <code class="code inline red">&</code>:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black"><span class="blue">int</span> myAge = <span class="red">43</span>;</span> // an int variable 
+
+                        <span class="black"><span class="blue">printf</span>(<span class="darkred">"%d"</span>, myAge);</span>  // Outputs the value of myAge (43)
+                        <span class="black"><span class="blue">printf</span>(<span class="darkred">"%p"</span>, &myAge);</span> // Outputs the memory address of myAge (0x7ffe5367e044)</code>
+                </div>
+                <p>A <strong>pointer</strong> is a variable that <strong>stores</strong> the <strong>memory address</strong> of another variable as its value.</p>
+                <p>A <strong>pointer variable points</strong> to a <strong>data type</strong> (like <code class="code inline red">int</code>) of the same type, and is created with the <code class="code inline red">*</code> operator.</p>
+                <p>The address of the variable you are working with is assigned to the pointer:</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black"><span class="blue">int</span> myAge = <span class="red">43</span>;</span>     // An int variable
+                        <strong><span class="black"><span class="blue">int*</span> ptr = &myAge;</span></strong>  // A pointer variable, with the name ptr, that stores the address of myAge
+                        
+                        // Output the value of myAge (43)
+                        <span class="black">printf(<span class="darkred">"%d\n"</span>, myAge);</span>
+                        
+                        // Output the memory address of myAge (0x7ffe5367e044)
+                        <span class="black">printf(<span class="darkred">"%p\n"</span>, &myAge);</span>
+                        
+                        // Output the memory address of myAge with the pointer (0x7ffe5367e044)
+                        <span class="black">printf(<span class="darkred">"%p\n"</span>, ptr);</span></code>
+                </div>
+                <h2>Example explained</h2>
+                <p>Create a pointer variable with the name <code class="code inline red">ptr</code>, that <strong>points to</strong> an <code class="code inline red">int</code> variable (<code class="code inline red">myAge</code>). Note that the type of the pointer has to match the type of the variable you're working with (<code class="code inline red">int</code> in our example).</p>
+                <p>Use the <code class="code inline red">&</code> operator to store the memory address of the <code class="code inline red">myAge</code> variable, and assign it to the pointer.</p>
+                <p>Now, <code class="code inline red">ptr</code> holds the value of <code class="code inline red">myAge</code>'s memory address.</p>
+                <h2>Dereference</h2>
+                <p>In the example above, we used the pointer variable to get the memory address of a variable (used together with the <code class="code inline red">&</code> <strong>reference</strong> operator).</p>
+                <p>You can also get the value of the variable the pointer points to, by using the <code class="code inline red">*</code> operator (the <strong>dereference</strong> operator):</p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <code class="code"><span class="black">int myAge = <span class="red">43</span>;</span>     // Variable declaration
+                        <span class="black">int* ptr = &myAge;</span>  // Pointer declaration
+                        
+                        // Reference: Output the memory address of myAge with the pointer (0x7ffe5367e044)
+                        <span class="black">printf(<span class="darkred">"%p\n"</span>, ptr);</span>
+                        
+                        // Dereference: Output the value of myAge with the pointer (43)
+                        <span class="black">printf(<span class="darkred">"%d\n"</span>, *ptr);</span></code>
+                </div>  
+                <br>
+                <div class="note">
+                    <p>Note that the * sign can be confusing here, as it does two different things in our code:</p>
+                    <ul>
+                        <li>When used in declaration (<span class="code inline red">int* ptr</span>), it creates a <strong>pointer variable</strong>.</li>
+                        <li>When not used in declaration, it act as a <strong>dereference operator</strong>.</li>
+                    </ul>
+                    <p><strong>Good To Know</strong>: There are two ways to declare pointer variables in C:</p>
+                    <div class="example"><code class="code black"><span class="blue">int*</span> myNum;
+                        <span class="blue">int</span> *myNum;</code>
+                    </div>
+                    <p><strong>Notes on Pointers</strong></p>
+                    <p>Pointers are one of the things that make C stand out from other programming languages, like Python and Java.</p>
+                    <p>They are important in C, because they allow us to manipulate the data in the computer's memory. This can reduce the code and improve the performance. If you are familiar with data structures like lists, trees and graphs, you should know that pointers are especially useful for implementing those. And sometimes you even have to use pointers, for example when working with files.</p>
+                    <p><strong>But be careful</strong>; pointers must be handled with care, since it is possible to damage data stored in other memory addresses.</p></div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
